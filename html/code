@@ -1,0 +1,35 @@
+const spending-threshold = 200;
+const tax-rate = 0.08;
+const phone-price = 99.99;
+const accessory-price = 9.99;
+
+var bank-balance = 303.91;
+var amount = 0;
+
+function calculatetax(amount) {
+    return amount * tax-rate;
+    }
+
+function formatamount(amount) {
+return "$" + amount.tofixed( 2 );
+}
+
+while (amount < bank-balance) {
+    amount = amount + phone-price;
+    
+    if (amount < spending-threshold)
+    amount - amount + accessory-price;
+    }
+}
+
+amount = amount + calculatetax( amount );
+
+console.log(
+    "your purchase: " + formatamount( amount )
+    );
+
+if (amount > bank-balance) {
+console.log(
+    "your cant afford this purchase. :("
+    );
+}
